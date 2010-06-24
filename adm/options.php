@@ -5,7 +5,7 @@
 	
 	<span class="error-text"><?=$response_text?></span>
 		
-	<form action="admin.php?mode=options" method="post">
+	<form action="admin.php?mode=opcoes" method="post">
 	
 	<?=$option_list?>
 	
