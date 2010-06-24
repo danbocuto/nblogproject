@@ -5,6 +5,25 @@ if(!defined('IN_BLOG'))
 }
 
 
+/*Função que limita o texto*/
+function limitatexto($texto, $final, $limite){
+    $result = $texto;
+    $len_texto = strlen($texto);
+    $len_final = strlen($final);
+
+    if ($len_texto + $len_final > $limite){
+            for ($i=$limite-$len_final;$i!==-1;$i--){
+                    if (substr($texto, $i, 1) == " " and substr($texto, $i-1, 1) !== " "){
+                            return substr($texto, 0, $i).$final;
+                            break;
+                    }
+            }
+    }
+    else{
+        return $texto;
+    }
+}
+
 function nb_connect($sqlconfig)
 {
 	$link = @mysql_connect($sqlconfig['host'], $sqlconfig['username'], $sqlconfig['password']);
