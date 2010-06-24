@@ -73,6 +73,17 @@ if(mysql_num_rows($result) > 0)
 { 
 	while($posts = mysql_fetch_array($result))
 	{
+	   if ($navegacao == 1) {
+		$vars = array(
+			'$postid$'		=> $posts['codigo'],
+			'$posturl$'		=> $posts['slug'],
+			'$posttitle$'	=> stripslashes($posts['titulo']),
+			'$postdate$'	=> strftime($config['formato-data'], $posts['data']),
+			'$postcontent$'	=> limitatexto(stripslashes($posts['conteudo']),'...',40),
+			'$postmenu$'	=> $posts['menu'],            
+		);
+        }
+        else {
 		$vars = array(
 			'$postid$'		=> $posts['codigo'],
 			'$posturl$'		=> $posts['slug'],
@@ -81,6 +92,8 @@ if(mysql_num_rows($result) > 0)
 			'$postcontent$'	=> stripslashes($posts['conteudo']),
 			'$postmenu$'	=> $posts['menu'],            
 		);
+            
+        }
 		
 		$template_vars		= array_keys($vars);
 		$template_values	= array_values($vars);
