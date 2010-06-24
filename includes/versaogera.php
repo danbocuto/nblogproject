@@ -20,9 +20,9 @@ include "versao.php";
         </font></td>
     </tr>
       <tr>
-      <td><font face="Verdana, Arial, Helvetica, sans-serif">CodName:</font></td>
+      <td><font face="Verdana, Arial, Helvetica, sans-serif">Release SVN:</font></td>
       <td><font face="Verdana, Arial, Helvetica, sans-serif">
-        <input type="text" name="codename"  value="<? echo _CODENAME; ?>">
+        <input type="text" name="codename"  value="<? echo _RELEASE_SVN; ?>">
         </font></td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@ $config = "<?\n";
 $config .= "DEFINE( '_RELEASE', '{$release}' );\n";
 $config .= "DEFINE( '_DEV_LEVEL', '{$devlevel}' );\n";
 $config .= "DEFINE( '_CODENAME', '{$codename}' );\n";
-$config .= "\$versao = 'v'._DEV_LEVEL.'['._CODENAME.'] '._RELEASE.'';\n";
+$config .= "\$versao = 'v'._DEV_LEVEL.'['._RELEASE_SVN.'] '._RELEASE.'';\n";
 $config .= "?>";
         if ($canWrite && ($fp = fopen("versao.php", "w"))) {
                 fputs( $fp, $config, strlen( $config ) );
