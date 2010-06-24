@@ -12,6 +12,6 @@ setlocale(LC_ALL,'pt_BR','ptb');
 define("_VERSAO", "1.0.0");
 
 //()Theme)Digite o nome do tema escolhido:
-$tema = 'neander';
+$tema = 'default';
 
 ?>
