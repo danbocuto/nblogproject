@@ -1,5 +1,3 @@
-#1 Introdução
-
 = Simples e Eficiente =
 
 O *nBlog* é um blog simples, fácil de usar, porém muito eficiente, todo desenvolvido em PHP/mySql/JavaScript/CSS, um bom script para aprendizado, para aqueles que estão iniciando é uma boa pedida estudar um código desses, acompanhe este projeto.
